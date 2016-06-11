@@ -4,16 +4,16 @@ Retirar '.example' do arquivo '.env.example' e configurar o banco.
 
 Após clonar o projeto, execute os seguintes comandos:
 
-. sudo composer update
-. php artisan key:generate
-. sudo chmod 777 -R storage
-. sudo chmod 777 -R bootstrap/cache
-. php artisan migrate
-. sudo php artisan optimize
-. sudo php artisan db:seed
-. sudo chmod 777 -R public
-. bower update 
-. npm install
+* sudo composer update
+* php artisan key:generate
+* sudo chmod 777 -R storage
+* sudo chmod 777 -R bootstrap/cache
+* php artisan migrate
+* sudo php artisan optimize
+* sudo php artisan db:seed
+* sudo chmod 777 -R public
+* bower update 
+* npm install
 
 Após excutar o 'seed', terá 2 usuários:
 kelvearagao@mail.com - senha: secret
