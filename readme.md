@@ -16,8 +16,8 @@ Após clonar o projeto, execute os seguintes comandos:
 * npm install
 
 Após excutar o 'seed', terá 2 usuários:
-kelvearagao@mail.com - senha: secret
-admin@mail.com - senha: secret
+kelvearagao@mail.com - senha: secret,
+admin@mail.com - senha: secret.
 
 # Laravel PHP Framework
 
