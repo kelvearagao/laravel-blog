@@ -1,45 +1,40 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Laravel</title>
+@extends('layouts.app')
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+@section('content')
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="panel panel-default">
+                <div class="panel-heading">Bem vindo ao blog!</div>
 
-        <style>
-            html, body {
-                height: 100%;
-            }
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <table class="table">
+                                <tbody>
+                                    @foreach( $posts as $post )
+                                        <tr>
+                                            <td class="col-md-1">
+                                                <img src="{{ asset($post->image) }}" class="img-rounded" height="50px">
+                                            </td>
+                                            
+                                            <td class="col-md-9">
+                                                <b>{{ $post->title }}</b> ({{ $post->date }}) <br>
+                                                {{ str_limit($post->content, 200) }}
+                                            </td>
 
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato';
-            }
-
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
-
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
-
-            .title {
-                font-size: 96px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="content">
-                <div class="title">Laravel 5</div>
+                                            <td class="col-md-1">
+                                                <a href="{{ url('post/' . $post->id) }}">Leia mais</a>
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </body>
-</html>
+    </div>
+</div>
+@endsection

@@ -12,5 +12,29 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+	$posts = App\Post::orderBy('date', 'desc')->get();
+
+    return view('welcome', [
+    	'posts' => $posts
+    ]);
 });
+
+/*
+Route::get('/post/{post_id}', function ($post_id) {
+	if( $post_id == 'create' )
+
+	$post = App\Post::find($post_id);
+
+    return view('post.show', [
+        'post' => $post
+    ]);
+});
+*/
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
+
+// Resources
+Route::resource('/user', 'UserController');
+Route::resource('/post', 'PostController');

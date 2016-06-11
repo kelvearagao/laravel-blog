@@ -30,3 +30,9 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 ## Instalação
 
 1. sudo composer update
+2. php artisan key:generate
+3. sudo chmod 777 -R storage
+4. sudo chmod 777 -R bootstrap/cache
+5. //php artisan make:auth
+6. php artisan migrate
+7. sudo chmod 777 -R public/photo
