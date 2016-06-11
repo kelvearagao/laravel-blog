@@ -1,3 +1,24 @@
+## Instalação
+
+Retirar '.example' do arquivo '.env.example' e configurar o banco.
+
+Após clonar o projeto, execute os seguintes comandos:
+
+. sudo composer update
+. php artisan key:generate
+. sudo chmod 777 -R storage
+. sudo chmod 777 -R bootstrap/cache
+. php artisan migrate
+. sudo php artisan optimize
+. sudo php artisan db:seed
+. sudo chmod 777 -R public
+. bower update 
+. npm install
+
+Após excutar o 'seed', terá 2 usuários:
+kelvearagao@mail.com - senha: secret
+admin@mail.com - senha: secret
+
 # Laravel PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
@@ -25,14 +46,3 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
-
-
-## Instalação
-
-1. sudo composer update
-2. php artisan key:generate
-3. sudo chmod 777 -R storage
-4. sudo chmod 777 -R bootstrap/cache
-5. //php artisan make:auth
-6. php artisan migrate
-7. sudo chmod 777 -R public/photo

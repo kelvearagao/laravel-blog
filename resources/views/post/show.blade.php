@@ -8,6 +8,10 @@
                 <div class="panel-heading">Post</div>
 
                 <div class="panel-body">
+                    
+                    <div class="row-fluid">
+                         <div class="col-md-12"><img src="{{ asset($post->image) }}" class="img-rounded" height="100px"></div>   
+                    </div>
 
                     <div class="row-fluid">
                         <div class="col-span-12"><h2>{{ $post->title }}</h2></div>
